@@ -1,5 +1,15 @@
+body{
+	color: green;
+}
 
-.wrapper {
-	color: #4286f4;
-	font-family: calibri;
+
+.my{
+	color: red;
+}
+div{
+	color: blue;
+}
+
+.myh{
+	color: black;
 }
