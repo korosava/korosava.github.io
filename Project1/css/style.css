@@ -1,6 +1,10 @@
 
-.wrapper {
+.col4 {
 	color: green;
 	margin-left: 30em;
 	font-family: calibri;
+	width: 40%
+}
+.col3{
+	width: 30%
 }

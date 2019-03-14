@@ -1,15 +1,31 @@
 body{
-	color: green;
-}
-
-
-.my{
-	color: red;
-}
-div{
-	color: blue;
-}
-
-.myh{
 	color: black;
+}
+*{
+	margin: 0;
+	margin-right: -0.3%;
+	padding: 0;
+}
+
+.col1{width: 10%;display: inline-block;}
+.col2{width: 20%;display: inline-block;}
+.col3{width: 30%;display: inline-block;}
+.col4{width: 40%;display: inline-block;}
+.col5{width: 50%;display: inline-block;}
+.col6{width: 60%;display: inline-block;}
+.col7{width: 70%;display: inline-block;}
+.col8{width: 80%;display: inline-block;}
+.col9{width: 90%;display: inline-block;}
+.col10{width: 100%;display: inline-block;}
+
+h1{
+	display: inline;
+}
+
+a{
+	text-decoration: none;
+	color: blue;
+	margin: 1%;
+	font-family: calibri;
+	font-size: 2em;
 }
