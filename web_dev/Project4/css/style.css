@@ -13,6 +13,7 @@ h1{
   color: red
 }
 
+
 /*<=================================_SLIDESHOW_CONTAINER_=================================>*/
 /* Slideshow container */
 .slideshow-container {
@@ -158,7 +159,8 @@ div.sticky-container{
   z-index: 1;
 }
 
-  /*<=================================_TEXT_CONTAINER_=================================>*/
+
+/*<=================================_TEXT_CONTAINER_=================================>*/
 
   .text-container{
     position: relative;
@@ -183,15 +185,35 @@ div.sticky-container{
   }
 
 
-
+/*<=================================_FORM_CONTAINER_=================================>*/
 .form-container{
   position: relative;
   margin-top: 30px;
 }
 
+
+/*<=================================_MAP_CONTAINER_=================================>*/
 .map-container{
   position: relative;
   margin-top: 30px;
   width: 100%;
   height: 40em;
 }
+
+
+/*<=================================_SOCIAL_CONTAINER_=================================>*/
+
+.social-container{
+  position: relative;
+  margin-top: 30px;
+  font-family: calibri;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.social-container a {
+  text-decoration: none;
+  color: blue;
+  margin-left: 20px;
+}
+
