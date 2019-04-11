@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<html>
+
+
+<!-------------------------------------_SLIDESHOW_CONTAINER_------------------------------------>
+
+<div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="./static/raccoon.png" style="width:100%">
+    <div class="text">Bloody Raccoon</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="./static/shwabra.png" style="width:100%">
+    <div class="text">Immortal Shwaber</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="./static/roof.png" style="width:100%">
+    <div class="text">Wild Roof</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  slides[slideIndex-1].style.display = "block"; 
+}
+</script>
+
+
+<!-------------------------------------_TABLE_CONTAINER_------------------------------------->
+
+<div class="table-container">
+<table>
+  <caption>A summary of the UK's most famous trunk bands</caption>
+  <thead>
+    <tr>
+      <th>Band</th>
+      <th>Year formed</th>
+      <th>No. of Albums</th>
+      <th>Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th>The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+    <tr>
+      <th>The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+    <tr>
+      <th>The Stranglers2</th>
+      <td>19742</td>
+      <td>172</td>
+      <td>No More Heroes2</td>
+    </tr>
+     <tr>
+      <th>The Stranglers3</th>
+      <td>19743</td>
+      <td>173</td>
+      <td>No More Heroes3</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2">Total albums</th>
+      <td colspan="2">377</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+
+<!-------------------------------------_STICKY_CONTAINER_------------------------------------->
+
+<div class="sticky-container">
+  helloooooooooo, blin
+</div>
+
+
+<!-------------------------------------_FLEX_CONTAINER_------------------------------------->
+<h1>Flex-box</h1>
+<div class="flex-container">
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+<div class="item">9</div>
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+<div class="item">9</div>
+</div>
+
+<!-------------------------------------_TEXT_CONTAINER_------------------------------------->
+
+<div class="text-container">
+Тайное общество было учреждено бывшими солдатами-южанами после Гражданской войны (1861—1865). Преступлениям членов ку-клукс-клана обычно предшествовало предупреждение, посланное в причудливой, но широко известной форме. В некоторых частях страны это была дубовая ветка с листьями, в других — семена дыни или зёрнышки апельсина. Получив такое предупреждение, жертва могла либо отречься от своих прежних взглядов, либо покинуть страну. Если человек игнорировал предупреждение, его ждала смерть.
+<br></br>
+<img src="static/kkk.jpg" width="15%", height="20%">
+<img src="static/breakout.png" width="25%", height="30%">
+<br></br>
+<a onclick="show_or_hide()">SHOW_OR_HIDE</a>
+
+  <div class="hidden">
+    Vodka is traditionally drunk "neat" or "straight" (not mixed with water, ice, or other mixer), though it is often served freezer chilled in the vodka belt countries of Belarus, Estonia, Finland, Iceland, Lithuania, Latvia, Norway, Poland, Russia, Sweden, and Ukraine. It is also used in cocktails and mixed drinks, such as the Vodka martini, Cosmopolitan, Vodka Tonic, Screwdriver, Greyhound, Black or White Russian, Moscow Mule, Bloody Mary, and Bloody Caesar.
+    <br></br>
+    <img src="static/bz.jpg" width="15%", height="20%">
+    <img src="static/harley.jpg" width="15%", height="20%">
+  </div>
+</div>
+
+<script type="text/javascript">
+  function show_or_hide(){
+    var hiddenText = document.getElementsByClassName("hidden");
+    if (hiddenText[0].style.display != 'none'){
+      hiddenText[0].style.display = 'none'
+    }
+    else {
+      hiddenText[0].style.display = 'block'
+    }
+  }
+</script>
+
+
+
+<!-------------------------------------_FORM_CONTAINER_------------------------------------->
+<div class="form-container">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfR6UZz1_lGDGt4FdH_cmjwy-tB8bKU8D_UZKYD7o9LdxkNZg/viewform?embedded=true" width="640" height="753" frameborder="0" marginheight="0" marginwidth="0">Завантаження...</iframe>
+</div>
+
+
+<!-------------------------------------_MAP_CONTAINER_------------------------------------->
+<h1>Google Map</h1>
+<div class="map-container" id='map'></div>
+<script type="text/javascript">
+    function initMap(){
+      var location = {lat: 49.837412, lng: 24.033569};
+        //maps options
+      var map = new google.maps.Map(document.getElementById("map"),{
+        zoom:14, 
+        center:location
+        });
+    }
+</script>
+<script type="text/javascript" async defer src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi5hqcjO54e6vmpgPbcTc9fpttl7-eCSc&callback=initMap" type="text/javascript">
+</script>
+
+
+</html>

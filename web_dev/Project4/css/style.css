@@ -1,0 +1,197 @@
+*{
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1{
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: overline;
+  color: red
+}
+
+/*<=================================_SLIDESHOW_CONTAINER_=================================>*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #41f48f;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #41f48f;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 75%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: calibri;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #41f48f;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Fading animation */
+.fade {
+  /*
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  */
+  animation-name: fade;
+  animation-duration: 1s;
+}
+/*
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+*/
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+
+/*<=================================_TABLE_CONTAINER_=================================>*/
+.table-container{
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  font-family: calibri;
+}
+
+table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #cbf442;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #c6ceab;
+}
+caption {
+  color: purple;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+/*<=================================_FLEX_CONTAINER_=================================>*/
+
+.flex-container{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  font-family: calibri;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100px;
+}
+.item{
+  width: 100px;
+  height: 50px;
+  background: red;
+  text-align: center;
+  border: 3px solid blue;
+
+}
+
+
+/*<=================================_STICKY_CONTAINER_=================================>*/
+
+div.sticky-container{
+  margin-top: 30px;
+  font-family: calibri;
+  position: sticky;
+  background: blue;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-size: 30px;
+  z-index: 1;
+}
+
+  /*<=================================_TEXT_CONTAINER_=================================>*/
+
+  .text-container{
+    position: relative;
+    margin-top: 30px;
+    font-family: calibri;
+    border: 2px solid black;
+  }
+  .text-container img{
+    margin-left: 250px;
+  }
+  .text-container a{
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+  }
+  .hidden{
+    display: none;
+    user-select: none;
+  }
+
+
+
+.form-container{
+  position: relative;
+  margin-top: 30px;
+}
+
+.map-container{
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40em;
+}
