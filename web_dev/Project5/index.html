@@ -16,8 +16,11 @@
 <html>
 
 
-<!-------------------------------------_SLIDESHOW_CONTAINER_------------------------------------>
+<h1 class="lab_header"><==========_LAB_4_==========></h1>
 
+
+<!-------------------------------------_SLIDESHOW_CONTAINER_------------------------------------>
+<h1 class="part_header">slideshow_1</h1>
 <div class="slideshow-container">
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
@@ -65,7 +68,7 @@ function showSlides(n) {
 
 
 <!-------------------------------------_TABLE_CONTAINER_------------------------------------->
-
+<h1 class="part_header">zebra_table_2</h1>
 <div class="table-container">
 <table>
   <caption>A summary of the UK's most famous trunk bands</caption>
@@ -120,14 +123,14 @@ function showSlides(n) {
 
 
 <!-------------------------------------_STICKY_CONTAINER_------------------------------------->
-
+<h1 class="part_header">sticky_container_3</h1>
 <div class="sticky-container">
   helloooooooooo
 </div>
 
 
 <!-------------------------------------_FLEX_CONTAINER_------------------------------------->
-<h1>Flex-box</h1>
+<h1 class="part_header">Flex-box_4</h1>
 <div class="flex-container">
 <div class="item">1</div>
 <div class="item">2</div>
@@ -150,7 +153,7 @@ function showSlides(n) {
 </div>
 
 <!-------------------------------------_TEXT_CONTAINER_------------------------------------->
-
+<h1 class="part_header">_text_container_5</h1>
 <div class="text-container">
 Тайное общество было учреждено бывшими солдатами-южанами после Гражданской войны (1861—1865). Преступлениям членов hello-клана обычно предшествовало предупреждение, посланное в причудливой, но широко известной форме. В некоторых частях страны это была дубовая ветка с листьями, в других — семена дыни или зёрнышки апельсина. Получив такое предупреждение, жертва могла либо отречься от своих прежних взглядов, либо покинуть страну. Если человек игнорировал предупреждение, его ждала смерть.
 <br></br>
@@ -182,13 +185,14 @@ function showSlides(n) {
 
 
 <!-------------------------------------_FORM_CONTAINER_------------------------------------->
-<div class="form-container">
+<h1 class="part_header">Google_Form_6</h1>
+<div class="gform-container">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfR6UZz1_lGDGt4FdH_cmjwy-tB8bKU8D_UZKYD7o9LdxkNZg/viewform?embedded=true" width="640" height="753" frameborder="0" marginheight="0" marginwidth="0">Завантаження...</iframe>
 </div>
 
 
 <!-------------------------------------_MAP_CONTAINER_------------------------------------->
-<h1>Google Map</h1>
+<h1 class="part_header">Google Map_7</h1>
 <div class="map-container" id='map'></div>
 <script type="text/javascript">
     function initMap(){
@@ -205,11 +209,132 @@ function showSlides(n) {
 
 
 <!-------------------------------------_SOCIAL_CONTAINER_------------------------------------->
-<h1>Contact us</h1>
+<h1 class="part_header">Contact_us_8</h1>
 <div class="social-container">
   <a href="https://www.facebook.com/groups/1649438508459769/">Facebook</a>
   <a href="https://t.me/korosawa">Telegram</a>
 </div>
 
 
+
+<!--__________________________________________LAB_5_____________________________________________
+    _____________________________________________________________________________________________-->
+<h1 class="lab_header"><==========_LAB_5_==========></h1>
+
+
+<!-------------------------------------_JAVA_SCRIPT_VALIDATION------------------------------------->
+<h1 class="part_header">java_script_validation_1</h1>
+<div class="form-container">
+  <div class="flex-container">
+    <form name="myForm" onsubmit="return validateForm()">
+    Input: <input type="date" name="number" min="1900-01-02" max="2019-05-09" pattern="[0-9]">
+    <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function validateForm() {
+  var x = document.forms["myForm"]["number"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  else if (x=="2000-01-02"){
+    alert("alarm, dangerous date!!!")
+  } 
+} 
+</script>
+
+
+<!-------------------------------------_DRAG_AND_DROP_------------------------------------->
+<h1 class="part_header">drugs and drops_2</h1>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<div class="flex-container">
+  <div class="drug_container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="drug_container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <img id="drag1" src="static/bz.jpg" draggable="true" ondragstart="drag(event)" width="150" height="100">
+</div>
+
+
+<!-------------------------------------_WEB_STORAGE_------------------------------------->
+<!--_chrome://settings/content/cookies ->> disable outside cookie files blocking_-->
+<h1 class="part_header">web_storage_3</h1>
+<script type="text/javascript">
+  function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
+  }
+
+  function checkStorageAvailable(type){
+    if (storageAvailable(type)){
+      document.getElementById('available_str').innerHTML = 'storage is available'
+    }
+    else{
+      document.getElementById('available_str').innerHTML = 'storage is NOT available'
+    }
+  }
+
+  function populateStorage() {
+    localStorage.setItem('key1', 'value1');
+    localStorage.setItem('key2', 'value2');
+    localStorage.setItem('key3', 'value3');
+  }
+  function getStorageData(){
+    console.log(localStorage)
+  }
+
+</script>
+
+<div class="storage_container">
+  <div class="flex-container">
+  <a onclick='checkStorageAvailable("localStorage")'>localStorage</a>
+  <a onclick='checkStorageAvailable("sessionStorage")'>sessionStorage</a>
+  </div>
+  <div class="flex-container">
+    <h2 id="available_str">... storage is ...</h2>
+  </div>
+  <div class="flex-container">
+    <a onclick="populateStorage()">populate_storage</a>
+    <a onclick="getStorageData()">getStorageData</a>
+  </div>
+</div>
+
+
+<!-------------------------------------_WEB_STORAGE_------------------------------------->
+<h1 class="part_header">web_workers_4</h1>
 </html>
