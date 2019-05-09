@@ -335,6 +335,39 @@ function drop(ev) {
 </div>
 
 
-<!-------------------------------------_WEB_STORAGE_------------------------------------->
+<!-------------------------------------_WEB_WORKERS_------------------------------------->
 <h1 class="part_header">web_workers_4</h1>
+
+<script type="text/javascript">
+  var w;
+  function startWorker(){
+    if (typeof(Worker) !== "undefined") {
+      if (typeof(w) == "undefined") {
+        w = new Worker("web_worker.js");
+      }
+      w.onmessage = function(event) {
+        document.getElementById("result").innerHTML = event.data;
+      };
+    } else {
+      document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+    }
+  }
+  function stopWorker() { 
+    w.terminate();
+    w = undefined;
+  }
+</script>
+
+<div class="storage_container">
+  <div class="flex-container">
+    <a onclick="startWorker()">start count</a>
+    <a onclick="stopWorker()">stop count</a>
+  </div>
+  <div class="flex-container">
+    <h2 id="result">
+      <output id="result"></output>
+      _?_want_count_?_
+    </h2>
+  </div>
+</div>
 </html>
