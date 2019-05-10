@@ -263,3 +263,87 @@ ________________________________________________________________________________
   font-size: 1.5em;
 }
 
+
+/*<=================================_WORKER_CONTAINER_=================================>*/
+.worker_container a{
+  cursor: pointer;
+  color: brown;
+  font-weight: bold;
+  border: 2.1px solid grey;
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+
+/*<=================================_AJAX_CONTAINER_=================================>*/
+
+.ajax_container{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: calibri;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.ajax_container a{
+  cursor: pointer;
+  border: 2.1px solid blue;
+  font-size: 1.5em;
+  font-family: monospace;
+  text-align: center;
+}
+.ajax_item{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: purple;
+}
+#blue{
+  color: blue;
+}
+
+
+/*<=================================_Jquery_CONTAINER_=================================>*/
+.jqery_container{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  font-family: calibri;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2em;
+  color: purple;
+}
+.jqery_container img{
+  position: relative;
+}
+#to_stop{
+  position: absolute;
+}
+#to_callback_hide{
+  margin-top: 3em;
+  color: brown
+}
+
+
+/*<=================================_56Json_=================================>*/
+.json_content{
+  cursor: pointer;
+  border: 2.1px solid grey;
+  font-size: 1.3em;
+  font-family: calibri;
+  font-weight: bold;
+  align-content: center;
+  text-align: center;
+  color: gray
+}
+
+.json_content a{
+  color: green;
+  font-size: 1.5em;
+}

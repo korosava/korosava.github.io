@@ -11,6 +11,7 @@
 
     gtag('config', 'UA-138205649-1');
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 </head>
 <html>
@@ -67,7 +68,7 @@ function showSlides(n) {
 </script>
 
 
-<!-------------------------------------_TABLE_CONTAINER_------------------------------------->
+<!------------------------------------------_TABLE_CONTAINER_------------------------------------------>
 <h1 class="part_header">zebra_table_2</h1>
 <div class="table-container">
 <table>
@@ -122,14 +123,14 @@ function showSlides(n) {
 </div>
 
 
-<!-------------------------------------_STICKY_CONTAINER_------------------------------------->
+<!------------------------------------------_STICKY_CONTAINER_------------------------------------------>
 <h1 class="part_header">sticky_container_3</h1>
 <div class="sticky-container">
   helloooooooooo
 </div>
 
 
-<!-------------------------------------_FLEX_CONTAINER_------------------------------------->
+<!-------------------------------------------_FLEX_CONTAINER_------------------------------------------->
 <h1 class="part_header">Flex-box_4</h1>
 <div class="flex-container">
 <div class="item">1</div>
@@ -152,7 +153,7 @@ function showSlides(n) {
 <div class="item">9</div>
 </div>
 
-<!-------------------------------------_TEXT_CONTAINER_------------------------------------->
+<!------------------------------------------------_TEXT_CONTAINER_------------------------------------------------>
 <h1 class="part_header">_text_container_5</h1>
 <div class="text-container">
 Тайное общество было учреждено бывшими солдатами-южанами после Гражданской войны (1861—1865). Преступлениям членов hello-клана обычно предшествовало предупреждение, посланное в причудливой, но широко известной форме. В некоторых частях страны это была дубовая ветка с листьями, в других — семена дыни или зёрнышки апельсина. Получив такое предупреждение, жертва могла либо отречься от своих прежних взглядов, либо покинуть страну. Если человек игнорировал предупреждение, его ждала смерть.
@@ -184,14 +185,14 @@ function showSlides(n) {
 
 
 
-<!-------------------------------------_FORM_CONTAINER_------------------------------------->
+<!------------------------------------------------_FORM_CONTAINER_------------------------------------------------>
 <h1 class="part_header">Google_Form_6</h1>
 <div class="gform-container">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfR6UZz1_lGDGt4FdH_cmjwy-tB8bKU8D_UZKYD7o9LdxkNZg/viewform?embedded=true" width="640" height="753" frameborder="0" marginheight="0" marginwidth="0">Завантаження...</iframe>
 </div>
 
 
-<!-------------------------------------_MAP_CONTAINER_------------------------------------->
+<!------------------------------------------------_MAP_CONTAINER_------------------------------------------------>
 <h1 class="part_header">Google Map_7</h1>
 <div class="map-container" id='map'></div>
 <script type="text/javascript">
@@ -208,7 +209,7 @@ function showSlides(n) {
 </script>
 
 
-<!-------------------------------------_SOCIAL_CONTAINER_------------------------------------->
+<!------------------------------------------------_SOCIAL_CONTAINER_------------------------------------------------>
 <h1 class="part_header">Contact_us_8</h1>
 <div class="social-container">
   <a href="https://www.facebook.com/groups/1649438508459769/">Facebook</a>
@@ -217,12 +218,13 @@ function showSlides(n) {
 
 
 
-<!--__________________________________________LAB_5_____________________________________________
-    _____________________________________________________________________________________________-->
+
+<!--_________________________________________________LAB_5____________________________________________________
+    ___________________________________________________________________________________________________________-->
 <h1 class="lab_header"><==========_LAB_5_==========></h1>
 
 
-<!-------------------------------------_JAVA_SCRIPT_VALIDATION------------------------------------->
+<!------------------------------------------------_JAVA_SCRIPT_VALIDATION------------------------------------------------>
 <h1 class="part_header">java_script_validation_1</h1>
 <div class="form-container">
   <div class="flex-container">
@@ -247,7 +249,7 @@ function showSlides(n) {
 </script>
 
 
-<!-------------------------------------_DRAG_AND_DROP_------------------------------------->
+<!------------------------------------------------_DRAG_AND_DROP_------------------------------------------------>
 <h1 class="part_header">drugs and drops_2</h1>
 
 <script>
@@ -271,7 +273,7 @@ function drop(ev) {
 </div>
 
 
-<!-------------------------------------_WEB_STORAGE_------------------------------------->
+<!------------------------------------------------_WEB_STORAGE_------------------------------------------------>
 <!--_chrome://settings/content/cookies ->> disable outside cookie files blocking_-->
 <h1 class="part_header">web_storage_3</h1>
 <script type="text/javascript">
@@ -299,7 +301,6 @@ function drop(ev) {
             (storage && storage.length !== 0);
     }
   }
-
   function checkStorageAvailable(type){
     if (storageAvailable(type)){
       document.getElementById('available_str').innerHTML = 'storage is available'
@@ -308,7 +309,6 @@ function drop(ev) {
       document.getElementById('available_str').innerHTML = 'storage is NOT available'
     }
   }
-
   function populateStorage() {
     localStorage.setItem('key1', 'value1');
     localStorage.setItem('key2', 'value2');
@@ -317,7 +317,6 @@ function drop(ev) {
   function getStorageData(){
     console.log(localStorage)
   }
-
 </script>
 
 <div class="storage_container">
@@ -335,7 +334,7 @@ function drop(ev) {
 </div>
 
 
-<!-------------------------------------_WEB_WORKERS_------------------------------------->
+<!------------------------------------------------_WEB_WORKERS_------------------------------------------------>
 <h1 class="part_header">web_workers_4</h1>
 
 <script type="text/javascript">
@@ -358,7 +357,7 @@ function drop(ev) {
   }
 </script>
 
-<div class="storage_container">
+<div class="worker_container">
   <div class="flex-container">
     <a onclick="startWorker()">start count</a>
     <a onclick="stopWorker()">stop count</a>
@@ -370,4 +369,208 @@ function drop(ev) {
     </h2>
   </div>
 </div>
+
+
+
+<!-----------------------------------------------_AJAX_------------------------------------------------>
+  <h1 class="part_header">ajax_5</h1>
+
+  <div class="ajax_container">
+    <h2 id="blue" class="ajax_item">test_url: https://httpbin.org/get</h2>
+    <form class="ajax_item" name="ajax_form">
+      end_point: <input id="data_url" type="text" name="data_url">
+    </form>
+    <div class="ajax_item">
+      <a onclick="get_ajax('text')">request_text</a>
+      <a onclick="get_ajax('status')">request_status</a>
+      <a onclick="get_ajax('headers')">request_headers</a>
+    </div>
+    <div class="ajax_item" id="aj_cont"></div>
+  </div>
+
+  <script type="text/javascript">
+    function get_ajax(data_type)
+    {
+      data_url = document.forms["ajax_form"]["data_url"].value;
+      if (data_url == "") {
+        alert("data_url must be filled out");
+        return false;
+      }
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
+         if (this.readyState == 4 && this.status == 200){
+          if(data_type == 'text')
+          {
+            document.getElementById('aj_cont').innerHTML = this.responseText;
+          }
+          else if (data_type == 'status'){
+            document.getElementById('aj_cont').innerHTML = this.statusText;
+          }else if (data_type == 'headers'){
+            document.getElementById('aj_cont').innerHTML = this.getAllResponseHeaders();
+          }
+          
+         }
+       };
+       xhttp.open("GET", data_url, true);
+       xhttp.send();
+       return xhttp.responseText;
+     }
+  </script>
+
+
+<!-----------------------------------------------_JQUERY_------------------------------------------------>
+  <h1 class="part_header">jquery_6</h1>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("#hide").hide();
+      });
+      $("#show").click(function(){
+        $("#hide").show();
+      });
+      
+      $("#fade_out").click(function(){
+        $("#fade_out").fadeOut();
+      });
+      $("#fade_in").click(function(){
+        $("#fade_out").fadeIn();
+      });
+      $("#slide_toggle").click(function(){
+        $("#slide_img").slideToggle("slow");
+      });
+      $("#cleaner").click(function(){
+        $("#cat").animate({left: '5em', opacity:'0'}, 'slow');
+      });
+      $("#to_stop").click(function(){
+        $("#to_stop").animate({right:'100px'}, "slow");
+      });
+      $("#stop").click(function(){
+        $("#to_stop").stop();
+      });
+      $("#to_callback_hide").click(function(){
+        $("#to_callback_hide").hide(500, function(){
+          alert("The paragraph is now hidden");
+        });
+      });
+
+      $("#chain").click(function(){
+        $("#to_chain").slideUp(2000).slideDown(2000).fadeOut();
+        });
+    });
+  </script>
+  <div class="jqery_container">
+    <a id="hide">hide</a>
+    <a id="show">show</a>
+  </div>
+  <div class="jqery_container">
+    <a id="fade_out">fade_out</a>
+    <a id="fade_in">fade_in</a>
+  </div>
+  <div class="jqery_container">
+    <a id="slide_toggle">slide_img</a>
+  </div>
+  <div class="jqery_container">
+    <img id="slide_img" src="static/bz.jpg">
+  </div>
+  <div class="jqery_container">
+    <a id="cleaner">
+      click me
+      <img src="static/cleaner.jpg">
+    </a>
+    <img id="cat" src="static/cat.jpg">
+ </div>
+ <div class="jqery_container">
+   <a id="stop">stop</a>
+   <h2 id="to_stop"> --->>>></h2>
+ </div>
+ <div id="to_callback_hide" class="jqery_container">
+   Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" (abdomen) (Greek: βραχύς, romanized: brachys = short,[2] οὐρά / οura = tail[3]), usually entirely hidden under the thorax. They live in all the world's oceans, in fresh water, and on land, are generally covered with a thick exoskeleton and have a single pair of pincers. Many other animals with similar names – such as hermit crabs, king crabs, porcelain crabs, horseshoe crabs, and crab lice – are not true crabs.
+ </div>
+ <div class="jqery_container">
+    <a id="chain">chainSAW</a>
+ </div>
+ <div class="jqery_container">
+   <img id="to_chain" src="static/bz.jpg">
+ </div>
+
+
+ <!-----------------------------------------------_56JSON_------------------------------------------------>
+  <h1 class="part_header">56Json</h1>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#get_ip").click(function(){
+        $.ajax({url: "http://ip.jsontest.com/", success: function(result){
+          console.log(result);
+          $("#ip_div").text(result.ip);
+          }});
+      });
+      $("#get_headers").click(function(){
+        $.ajax({url: "http://headers.jsontest.com/", success: function(result){
+          console.log(result);
+          $("#headers_div").text(result["Accept-Language"]);
+        }});
+      });
+      $("#get_date").click(function(){
+        $.ajax({url: "http://date.jsontest.com", success: function(result){
+          console.log(result);
+          $("#date_div").text(result["date"]);
+        }});
+      });
+      $("#get_echo").click(function(){
+        $.ajax({url: "http://echo.jsontest.com/me/yura/", success: function(result){
+          console.log(result);
+          $("#echo_div").text(result["me"]);
+        }});
+      });
+      $("#get_valid").click(function(){
+        $.ajax({url: 'http://validate.jsontest.com/?json={"key":"value"}', success: function(result){
+          console.log(result);
+          $("#valid_div").text(result["object_or_array"]);
+        }});
+      });
+      $("#get_js_code").click(function(){
+        $.ajax({url: 'http://code.jsontest.com', success: function(result){
+          console.log(result);
+          $("#js_code_div").text(result);
+        }});
+      });
+      $("#get_md5").click(function(){
+        $.ajax({url: 'http://md5.jsontest.com/?text=example_text', success: function(result){
+          console.log(result);
+           res = JSON.stringify(obj);
+          $("#md5_div").text(res);
+        }});
+      });
+
+    });
+  </script>
+
+  <div class="json_content">
+    <a id="get_ip">get_ip</a>
+    <div id="ip_div"></div>
+    
+    <a id="get_headers">get_headers</a>
+    <div id="headers_div"></div>
+    
+    <a id="get_date">get_date</a>
+    <div id="date_div"></div>
+
+    <a id="get_echo">get_echo</a>
+    <div id="echo_div"></div>
+
+    <a id="get_valid">get_validation</a>
+    <div id="valid_div"></div>
+
+    <a id="get_js_code">get_js_code</a>
+    <div id="js_code_div"></div>
+
+    <a id="get_md5">get_md5</a>
+    <div id="md5_div"></div>
+
+
+  </div>
+
+
+
 </html>
+
