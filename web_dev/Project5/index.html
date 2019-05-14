@@ -537,7 +537,7 @@ function drop(ev) {
       $("#get_md5").click(function(){
         $.ajax({url: 'http://md5.jsontest.com/?text=example_text', success: function(result){
           console.log(result);
-           res = JSON.stringify(obj);
+           res = JSON.stringify(result);
           $("#md5_div").text(res);
         }});
       });
@@ -567,9 +567,7 @@ function drop(ev) {
     <a id="get_md5">get_md5</a>
     <div id="md5_div"></div>
 
-
   </div>
-
 
 
 </html>
