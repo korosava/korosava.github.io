@@ -499,7 +499,7 @@ function drop(ev) {
   <script type="text/javascript">
     $(document).ready(function(){
       $("#get_ip").click(function(){
-        $.ajax({url: "https://ip.jsontest.com/", success: function(result){
+        $.ajax({url: "http://ip.jsontest.com/", success: function(result){
           console.log(result);
           $("#ip_div").text(result.ip);
           }});
@@ -529,10 +529,7 @@ function drop(ev) {
         }});
       });
       $("#get_js_code").click(function(){
-        $.ajax({url: 'http://code.jsontest.com', success: function(result){
-          console.log(result);
-          $("#js_code_div").text(result);
-        }});
+        $.ajax({url: 'http://code.jsontest.com', dataType:'jsonp'});
       });
       $("#get_md5").click(function(){
         $.ajax({url: 'http://md5.jsontest.com/?text=example_text', success: function(result){
