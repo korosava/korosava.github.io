@@ -499,7 +499,7 @@ function drop(ev) {
   <script type="text/javascript">
     $(document).ready(function(){
       $("#get_ip").click(function(){
-        $.ajax({url: "http://ip.jsontest.com/", success: function(result){
+        $.ajax({url: "https://ip.jsontest.com/", success: function(result){
           console.log(result);
           $("#ip_div").text(result.ip);
           }});
