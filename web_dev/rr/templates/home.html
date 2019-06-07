@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="jumbotron text-center"> 
+		<h1><__operate products here__></h1>
+
+		{% if todo=='update' %}
+			<h3>Update</h3>
+			<form method="POST">
+				<div class="form-group">id: <input type="text" name="id"></div>
+				<div class="form-group">name: <input type="text" name="name"></div>
+				<div class="form-group">description: <input type="textarea" name="desc"></div>
+				<div class="form-group">price: <input type="text" name="price"></div>
+				<div class="form-group">quality: <input type="text" name="qty"></div>
+				<p><input type="submit" value="Submit" class="btn btn-primary"></p>
+			</form>
+
+		{% elif todo=='delete' %}
+			<h3>Delete</h3>
+			<form method="POST">
+				<div class="form-group">id: <input type="text" name="id"></div>
+				<p><input type="submit" value="Submit" class="btn btn-primary"></p>
+			</form>
+
+		{% elif todo=='getbyid' %}
+			<h3>Get product by id: </h3>
+			<form method="POST">
+				<div class="form-group">id: <input type="text" name="id"></div>
+				<p><input type="submit" value="Submit" class="btn btn-primary"></p>
+			</form>
+
+		{% elif todo=='add' %}
+			<h3>Add product: </h3>
+			<form method="POST">
+				<div class="form-group">name: <input type="text" name="name"></div>
+				<div class="form-group">description: <input type="textarea" name="desc"></div>
+				<div class="form-group">price: <input type="text" name="price"></div>
+				<div class="form-group">quality: <input type="text" name="qty"></div>
+				<p><input type="submit" value="Submit" class="btn btn-primary"></p>
+			</form>
+		{% endif %}
+	</div>
+{% endblock %}

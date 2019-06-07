@@ -1,0 +1,6 @@
+# відключення паролю mysql
+mysqld --console --skip-grant-tables --shared-memory
+# створення бази
+python
+from app import db
+db.create_all()
